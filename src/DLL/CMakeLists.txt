@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
-set(LIBRARY_NAME SkillSyncDLL) # Replace MyDLL with your dll's name
+set(LIBRARY_NAME SkillSyncDLL)
 
-# Add all the cpp files you want to compile into your library
 add_library(${LIBRARY_NAME} SHARED
         main.cpp
         features/features.cpp
