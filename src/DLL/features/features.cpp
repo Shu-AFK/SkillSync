@@ -8,9 +8,8 @@ void FeaturesRun(std::uintptr_t client) noexcept
 {
 	std::vector<std::thread> threads;
 
-	// Creates threads of all of the features
-	std::thread Movement_BunnyHopThread(movement::BunnyHop, client);
-	threads.push_back(Movement_BunnyHopThread);
+	// Creates threads of all the features
+	threads.emplace_back(movement::BunnyHop, client);
 
 	for (size_t i = 0; i < threads.size(); i++)
 	{
